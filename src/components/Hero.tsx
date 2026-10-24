@@ -48,8 +48,7 @@ export function Hero() {
                 Aaqib Rashid Mir
               </h1>
               <p className="text-xl sm:text-2xl font-display font-medium text-zinc-300 leading-snug">
-                Designing Explainable AI Systems. <br className="hidden sm:inline" />
-                Training the Next Generation of AI Engineers.
+                Intelligent Architectures. Transparent Models. Production Scale.
               </p>
             </div>
 
@@ -64,7 +63,7 @@ export function Hero() {
                 href="#projects"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-zinc-950 bg-white hover:bg-zinc-200 shadow-md hover:scale-[1.01] active:scale-[0.99] transition-all"
               >
-                <span>Explore Code &amp; Systems</span>
+                <span>View Projects &amp; Pipelines</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
