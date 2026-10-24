@@ -85,7 +85,7 @@ export default function ResumePage() {
           {/* Education */}
           <section className="mb-8">
             <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-3">
-              Education
+              Education &amp; Academic Qualifications
             </h2>
             <div className="space-y-4">
               {profileData.education.map((edu, idx) => (
@@ -97,9 +97,6 @@ export default function ResumePage() {
                     <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
                       {edu.period}
                     </span>
-                  </div>
-                  <div className="text-xs text-slate-600 dark:text-slate-400">
-                    {edu.institution} &bull; <strong className="text-slate-900 dark:text-slate-200">{edu.score}</strong>
                   </div>
                 </div>
               ))}

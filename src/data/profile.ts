@@ -1,9 +1,9 @@
 export interface Education {
   degree: string;
   field: string;
-  institution: string;
+  institution?: string;
   period: string;
-  score: string;
+  score?: string;
   highlights: string[];
 }
 
@@ -18,9 +18,9 @@ export interface Experience {
 
 export const profileData = {
   name: "Aaqib Rashid Mir",
-  title: "Data Science & AI Trainer | AI Researcher | AI Engineer",
+  title: "Data Science & AI Trainer | GenAI Engineer | XAI Researcher | Healthcare Analyst",
   summary:
-    "Assistant Professor and Technical Educator with over 3 years of experience delivering cutting-edge Artificial Intelligence, Machine Learning, Generative AI, and Data Science education at undergraduate and postgraduate levels. Holds an M.Tech in Data Science & Artificial Intelligence (CGPA 8.15) and B.Tech in Computer Science & Engineering. AWS Certified Cloud Practitioner (CLF-C02) and Microsoft Certified Azure AI Fundamentals (AI-900). Progressed from Technical Trainer to Assistant Professor at Guru Nanak Institutions Technical Campus, pioneering hands-on LLM, RAG, and Prompt Engineering curricula. Published researcher in Explainable AI (XAI) and Computer Vision, mentor to 100+ capstone projects, and passionate educator committed to turning complex AI research into real-world production engineering skills.",
+    "Founder of The Coding Science and Technical Trainer with over 3 years of experience delivering cutting-edge Artificial Intelligence, Machine Learning, Generative AI, and Data Science education. Holds an M.Tech in Data Science & Artificial Intelligence and B.Tech in Computer Science & Engineering. AWS Certified Cloud Practitioner (CLF-C02) and Microsoft Certified Azure AI Fundamentals (AI-900). Progressed from Technical Trainer to Assistant Professor at Guru Nanak Institutions Technical Campus, pioneering hands-on LLM, RAG, and Prompt Engineering curricula. Published researcher in Explainable AI (XAI) and Computer Vision, mentor to 100+ capstone projects, and passionate educator committed to turning complex AI research into real-world production engineering skills.",
   
   philosophy: [
     {
@@ -44,9 +44,7 @@ export const profileData = {
     {
       degree: "Master of Technology (M.Tech)",
       field: "Data Science & Artificial Intelligence",
-      institution: "Mewar University, Rajasthan",
       period: "2023 – 2025",
-      score: "CGPA: 8.15 / 10",
       highlights: [
         "Specialization in Deep Learning, Explainable AI (XAI), and Large Language Models",
         "Master's Thesis: VGG16-Based Explainable Brain Tumor Detection Using Grad-CAM",
@@ -56,9 +54,7 @@ export const profileData = {
     {
       degree: "Bachelor of Technology (B.Tech)",
       field: "Computer Science & Engineering",
-      institution: "Islamic University of Science & Technology (IUST), Jammu & Kashmir",
       period: "2017 – 2021",
-      score: "CGPA: 7.33 / 10",
       highlights: [
         "Rigorous foundation in Algorithms, Data Structures, Operating Systems, and Distributed Computing",
         "Developed full-stack web and database applications with automated pipelines",

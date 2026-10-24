@@ -171,19 +171,13 @@ export function AboutSection() {
                     <div className="text-xs font-mono text-slate-500 dark:text-zinc-400">
                       {edu.period}
                     </div>
-                    <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
-                      {edu.score}
-                    </span>
                   </div>
 
                   <h3 className="text-lg font-bold text-slate-900 dark:text-zinc-100">
                     {edu.degree}
                   </h3>
-                  <div className="text-sm font-medium text-slate-700 dark:text-zinc-300 mb-1">
+                  <div className="text-sm font-medium text-slate-700 dark:text-zinc-300 mb-4">
                     {edu.field}
-                  </div>
-                  <div className="text-xs text-slate-500 dark:text-zinc-400 mb-4">
-                    {edu.institution}
                   </div>
 
                   <div className="space-y-1.5 pt-3 border-t border-slate-100 dark:border-zinc-800/80">

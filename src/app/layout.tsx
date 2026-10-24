@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     "LangGraph Multi-Agent",
     "Ollama Tool Calling",
     "The Coding Science",
-    "Mewar University Data Science",
     "Guru Nanak Institutions Hyderabad",
     "AWS Certified Cloud Practitioner",
     "Azure AI-900",
@@ -114,16 +113,6 @@ export default function RootLayout({
       siteConfig.socials.linkedin,
       siteConfig.socials.github,
       siteConfig.socials.colab,
-    ],
-    alumniOf: [
-      {
-        "@type": "CollegeOrUniversity",
-        name: "Mewar University",
-      },
-      {
-        "@type": "CollegeOrUniversity",
-        name: "Islamic University of Science & Technology (IUST)",
-      },
     ],
     knowsAbout: [
       "Artificial Intelligence",

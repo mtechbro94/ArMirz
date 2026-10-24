@@ -24,15 +24,18 @@ test("Unit Test: siteConfig integrity and verified URLs", () => {
 test("Unit Test: profileData academic credentials & timeline", () => {
   assert.equal(profileData.name, "Aaqib Rashid Mir");
   
-  // Verify M.Tech and B.Tech records
+  // Verify M.Tech and B.Tech degree qualifications exist
   const mtech = profileData.education.find(e => e.degree.includes("M.Tech"));
-  assert.ok(mtech, "M.Tech record must exist");
-  assert.ok(mtech.score.includes("8.15"), "M.Tech CGPA must be 8.15");
-  assert.equal(mtech.institution, "Mewar University, Rajasthan");
+  assert.ok(mtech, "M.Tech degree must exist");
+  assert.equal(mtech.field, "Data Science & Artificial Intelligence");
+  assert.equal(mtech.score, undefined, "CGPA score must be omitted/hidden");
+  assert.equal(mtech.institution, undefined, "College/university name must be omitted/hidden");
 
   const btech = profileData.education.find(e => e.degree.includes("B.Tech"));
-  assert.ok(btech, "B.Tech record must exist");
-  assert.ok(btech.score.includes("7.33"), "B.Tech CGPA must be 7.33");
+  assert.ok(btech, "B.Tech degree must exist");
+  assert.equal(btech.field, "Computer Science & Engineering");
+  assert.equal(btech.score, undefined, "CGPA score must be omitted/hidden");
+  assert.equal(btech.institution, undefined, "College/university name must be omitted/hidden");
 
   // Verify Assistant Professor tenure at Guru Nanak Institutions
   const asstProf = profileData.experience.find(e => e.role.includes("Assistant Professor"));
