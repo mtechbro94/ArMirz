@@ -55,7 +55,7 @@ export function Hero() {
 
             {/* Editorial Narrative */}
             <p className="text-sm sm:text-base text-zinc-400 max-w-xl leading-relaxed">
-              Founder of <strong className="text-white font-medium">The Coding Science</strong> and Technical Trainer in AI, ML &amp; Data Science. Active researcher in Explainable AI (XAI) and multimodal healthcare analytics, with 3+ years delivering production-oriented training across Python, Analytics, Data Science, AI, and DevOps.
+              Founder of <strong className="text-white font-medium">The Coding Science</strong>, AI Researcher, and Technical Trainer. Over 3 years bridging academic research in Explainable AI with production engineering across Python, Data Science, GenAI, and cloud pipelines.
             </p>
 
             {/* Action Buttons */}
