@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Official portfolio of Aaqib Rashid Mir (AIwithMir): Assistant Professor, Data Science & AI Trainer, AI Researcher, and AI Engineer. Explore production AI projects, Explainable AI research, and workshops.",
+    "Official portfolio of Aaqib Rashid Mir (AIwithMir): Data Science & AI Trainer, GenAI Engineer, XAI Researcher, and Healthcare Analyst. Founder of The Coding Science. Explore production AI architectures, peer-reviewed Explainable AI research, and technical workshops.",
   keywords: [
     "Aaqib Rashid Mir",
     "AIwithMir",
@@ -101,10 +101,15 @@ export default function RootLayout({
     "@type": "Person",
     name: "Aaqib Rashid Mir",
     alternateName: "AIwithMir",
-    jobTitle: "Data Science & AI Trainer | AI Researcher | AI Engineer",
+    jobTitle: "Data Science & AI Trainer | GenAI Engineer | XAI Researcher | Healthcare Analyst",
     description: siteConfig.heroDescription,
     url: siteConfig.siteUrl,
     image: `${siteConfig.siteUrl}/images/aaqib-profile.jpg`,
+    worksFor: {
+      "@type": "EducationalOrganization",
+      name: "The Coding Science — School of Technology & AI Innovations",
+      url: siteConfig.siteUrl,
+    },
     sameAs: [
       siteConfig.socials.linkedin,
       siteConfig.socials.github,

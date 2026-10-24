@@ -9,6 +9,7 @@ import { certificationsData } from "../src/data/certifications.ts";
 import { coursesData } from "../src/data/courses.ts";
 import { workshopsData } from "../src/data/workshops.ts";
 import { skillCategories } from "../src/data/skills.ts";
+import { testimonialsData } from "../src/data/testimonials.ts";
 
 test("Unit Test: siteConfig integrity and verified URLs", () => {
   assert.equal(siteConfig.name, "AIwithMir");
@@ -57,10 +58,22 @@ test("Unit Test: publicationsData peer-reviewed citations", () => {
   assert.ok(ijfmr, "IJFMR publication must exist");
   assert.equal(ijfmr.paperId, "84195");
   assert.equal(ijfmr.impactFactor, "9.24");
+  assert.ok(ijfmr.bibtex && ijfmr.bibtex.includes("@article"), "IJFMR must have valid BibTeX");
 
   const ijsr = publicationsData.find(p => p.journal.includes("IJSR"));
   assert.ok(ijsr, "IJSR publication must exist");
   assert.ok(ijsr.title.includes("Grad-CAM"));
+  assert.ok(ijsr.bibtex && ijsr.bibtex.includes("@article"), "IJSR must have valid BibTeX");
+});
+
+test("Unit Test: testimonialsData integrity and institutional endorsements", () => {
+  assert.ok(testimonialsData.length >= 3, "Must have at least 3 endorsements");
+  for (const t of testimonialsData) {
+    assert.ok(t.name.length > 0, "Testimonial must have a name");
+    assert.ok(t.content.length > 20, "Testimonial must have substantive content");
+    assert.ok(t.highlight.length > 0, "Testimonial must have a highlight quote");
+    assert.ok(t.avatarInitials.length === 2, "Testimonial must have 2 initials");
+  }
 });
 
 test("Unit Test: certificationsData credentials validation", () => {

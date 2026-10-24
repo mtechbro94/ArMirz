@@ -2,7 +2,7 @@
 
 import React from "react";
 import { certificationsData } from "@/data/certifications";
-import { Award, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Award, ShieldCheck, CheckCircle2, ExternalLink } from "lucide-react";
 
 export function CertificationsSection() {
   return (
@@ -69,9 +69,22 @@ export function CertificationsSection() {
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block" />
                   {cert.status}
                 </span>
-                <span className="text-[10px] font-mono text-slate-400">
-                  {cert.category}
-                </span>
+
+                {cert.verificationUrl ? (
+                  <a
+                    href={cert.verificationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-mono font-medium text-slate-700 dark:text-zinc-300 hover:text-slate-950 dark:hover:text-white hover:underline transition-colors"
+                  >
+                    <span>Verify</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                ) : (
+                  <span className="text-[10px] font-mono text-slate-400">
+                    {cert.category}
+                  </span>
+                )}
               </div>
             </div>
           ))}

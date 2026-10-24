@@ -9,11 +9,19 @@ import {
   Layers,
   ArrowRight,
   Building2,
+  ChevronDown,
+  ChevronUp,
+  FileCheck,
 } from "lucide-react";
 import Link from "next/link";
 
 export function CoursesSection() {
   const [selectedFilter, setSelectedFilter] = useState<string>("All");
+  const [expandedCourseId, setExpandedCourseId] = useState<string | null>(null);
+
+  const toggleExpand = (id: string) => {
+    setExpandedCourseId((prev) => (prev === id ? null : id));
+  };
 
   const categories = ["All", "Generative AI", "Agentic AI", "Data Science & ML", "Core Programming"];
 
@@ -105,16 +113,28 @@ export function CoursesSection() {
                 </div>
 
                 {/* Syllabus Modules */}
-                <div className="space-y-1.5 mb-5">
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-400 font-semibold">
-                    Curriculum Modules:
+                <div className="space-y-1.5 mb-4">
+                  <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-400 font-semibold mb-1">
+                    <span>Curriculum Modules:</span>
+                    <span>{course.curriculum.length} Modules</span>
                   </div>
-                  {course.curriculum.map((mod, i) => (
+                  {(expandedCourseId === course.id ? course.curriculum : course.curriculum.slice(0, 3)).map((mod, i) => (
                     <div key={i} className="text-xs text-slate-600 dark:text-zinc-300 flex items-start gap-1.5">
-                      <span className="inline-block w-1 h-1 rounded-full bg-slate-400 dark:bg-zinc-500 mt-1.5 flex-shrink-0" />
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500/80 mt-1.5 flex-shrink-0" />
                       <span>{mod}</span>
                     </div>
                   ))}
+                  
+                  {course.curriculum.length > 3 && (
+                    <button
+                      onClick={() => toggleExpand(course.id)}
+                      type="button"
+                      className="mt-2 text-xs font-mono text-indigo-600 dark:text-indigo-400 hover:underline inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <span>{expandedCourseId === course.id ? "Collapse Syllabus" : `+ View Remaining ${course.curriculum.length - 3} Modules & Capstone`}</span>
+                      {expandedCourseId === course.id ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                    </button>
+                  )}
                 </div>
 
                 <div className="p-3 rounded-lg bg-slate-50 dark:bg-zinc-950/60 border border-slate-100 dark:border-zinc-800/80 mb-5 text-xs text-slate-600 dark:text-zinc-400">

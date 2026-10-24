@@ -1,16 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { publicationsData } from "@/data/publications";
 import {
   FileText,
   ExternalLink,
   Cpu,
   ArrowRight,
+  Copy,
+  Check,
+  Quote,
 } from "lucide-react";
 import Link from "next/link";
+import { InteractiveXaiDemo } from "./InteractiveXaiDemo";
 
 export function ResearchSection() {
+  const [copiedBibtexIndex, setCopiedBibtexIndex] = useState<number | null>(null);
+
+  const copyBibtex = (bibtex: string, index: number) => {
+    if (typeof navigator !== "undefined" && navigator.clipboard) {
+      navigator.clipboard.writeText(bibtex);
+      setCopiedBibtexIndex(index);
+      setTimeout(() => setCopiedBibtexIndex(null), 2200);
+    }
+  };
+
   const researchInterests = [
     {
       title: "Explainable AI (XAI) & Interpretability",
@@ -73,6 +87,11 @@ export function ResearchSection() {
           </div>
         </div>
 
+        {/* Interactive XAI Attribution Visualizer */}
+        <div className="mb-14">
+          <InteractiveXaiDemo />
+        </div>
+
         {/* Publications List */}
         <div className="space-y-4">
           <h3 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-zinc-400 mb-2 flex items-center gap-2">
@@ -133,22 +152,45 @@ export function ResearchSection() {
                     ))}
                   </div>
 
-                  {pub.links && pub.links.length > 0 && (
-                    <div className="flex items-center gap-3">
-                      {pub.links.map((link, lIdx) => (
-                        <a
-                          key={lIdx}
-                          href={link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-xs font-semibold text-slate-800 dark:text-zinc-200 hover:text-slate-950 dark:hover:text-white"
-                        >
-                          <span>{link.label}</span>
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      ))}
-                    </div>
-                  )}
+                  <div className="flex items-center gap-3">
+                    {pub.bibtex && (
+                      <button
+                        onClick={() => copyBibtex(pub.bibtex!, idx)}
+                        type="button"
+                        className="inline-flex items-center gap-1.5 text-xs font-mono px-2.5 py-1 rounded-lg border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900 text-slate-700 dark:text-zinc-300 hover:border-slate-400 dark:hover:border-zinc-600 transition-all cursor-pointer"
+                        title="Copy BibTeX entry to clipboard"
+                      >
+                        {copiedBibtexIndex === idx ? (
+                          <>
+                            <Check className="w-3.5 h-3.5 text-emerald-500" />
+                            <span className="text-emerald-600 dark:text-emerald-400 font-semibold">BibTeX Copied</span>
+                          </>
+                        ) : (
+                          <>
+                            <Quote className="w-3.5 h-3.5 text-slate-500 dark:text-zinc-400" />
+                            <span>Cite (BibTeX)</span>
+                          </>
+                        )}
+                      </button>
+                    )}
+
+                    {pub.links && pub.links.length > 0 && (
+                      <div className="flex items-center gap-3">
+                        {pub.links.map((link, lIdx) => (
+                          <a
+                            key={lIdx}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-xs font-semibold text-slate-800 dark:text-zinc-200 hover:text-slate-950 dark:hover:text-white"
+                          >
+                            <span>{link.label}</span>
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

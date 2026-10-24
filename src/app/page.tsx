@@ -7,6 +7,7 @@ import { TeachingSection } from "@/components/TeachingSection";
 import { CoursesSection } from "@/components/CoursesSection";
 import { ResearchSection } from "@/components/ResearchSection";
 import { CertificationsSection } from "@/components/CertificationsSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { BlogSection } from "@/components/BlogSection";
 import { ContactSection } from "@/components/ContactSection";
 
@@ -21,6 +22,7 @@ export default function HomePage() {
       <CoursesSection />
       <ResearchSection />
       <CertificationsSection />
+      <TestimonialsSection />
       <BlogSection />
       <ContactSection />
     </>

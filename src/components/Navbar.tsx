@@ -6,11 +6,21 @@ import Image from "next/image";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { ThemeToggle } from "./ThemeToggle";
+import { CommandPalette } from "./CommandPalette";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+
+  const desktopNavLinks = [
+    { name: "Projects", href: "/#projects" },
+    { name: "Research", href: "/#research" },
+    { name: "Workshops", href: "/#teaching" },
+    { name: "Certifications", href: "/#certifications" },
+    { name: "Articles", href: "/#articles" },
+    { name: "Resume", href: "/resume" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +84,7 @@ export function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-1 bg-slate-100/80 dark:bg-zinc-900/60 border border-slate-200/80 dark:border-zinc-800/80 rounded-full px-2.5 py-1">
-            {siteConfig.navLinks.map((link) => {
+            {desktopNavLinks.map((link) => {
               const isActive = activeSection && link.href.includes(activeSection);
               return (
                 <Link
@@ -93,7 +103,8 @@ export function Navbar() {
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2">
+            <CommandPalette />
             <ThemeToggle />
             <Link
               href="#contact"

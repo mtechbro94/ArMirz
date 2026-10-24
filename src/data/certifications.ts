@@ -8,6 +8,7 @@ export interface Certification {
   skills: string[];
   status: "Active & Verified";
   badgeColor: string;
+  verificationUrl?: string;
 }
 
 export const certificationsData: Certification[] = [
@@ -22,6 +23,7 @@ export const certificationsData: Certification[] = [
     skills: ["AWS Cloud Architecture", "Cloud Security", "Cost Optimization", "IAM", "Serverless"],
     status: "Active & Verified",
     badgeColor: "from-amber-500/20 to-orange-500/20 border-amber-500/30 text-amber-400",
+    verificationUrl: "https://www.credly.com/organizations/amazon-web-services/badges",
   },
   {
     id: "azure-ai-900",
@@ -34,6 +36,7 @@ export const certificationsData: Certification[] = [
     skills: ["Azure Cognitive Services", "Azure AI Studio", "Computer Vision", "Responsible AI"],
     status: "Active & Verified",
     badgeColor: "from-blue-500/20 to-cyan-500/20 border-blue-500/30 text-blue-400",
+    verificationUrl: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/",
   },
   {
     id: "deep-learning-specialization",
@@ -45,6 +48,7 @@ export const certificationsData: Certification[] = [
     skills: ["Backpropagation", "CNNs", "RNNs & LSTMs", "Optimization (Adam, Dropout)", "Hyperparameter Tuning"],
     status: "Active & Verified",
     badgeColor: "from-purple-500/20 to-indigo-500/20 border-purple-500/30 text-purple-400",
+    verificationUrl: "https://www.coursera.org/specializations/deep-learning",
   },
   {
     id: "google-analytics-certification",
@@ -56,5 +60,6 @@ export const certificationsData: Certification[] = [
     skills: ["Web Telemetry", "Funnel Analytics", "Data-Driven Attribution", "Audience Segmentation"],
     status: "Active & Verified",
     badgeColor: "from-emerald-500/20 to-teal-500/20 border-emerald-500/30 text-emerald-400",
+    verificationUrl: "https://skillshop.exceedlms.com/student/catalog",
   },
 ];

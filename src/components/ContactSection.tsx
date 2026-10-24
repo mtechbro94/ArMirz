@@ -11,6 +11,8 @@ import {
   CheckCircle2,
   AlertCircle,
   Clock,
+  Calendar,
+  ArrowRight,
 } from "lucide-react";
 
 export function ContactSection() {
@@ -175,6 +177,27 @@ export function ContactSection() {
                 </div>
               </div>
 
+              {/* Discovery Call Card */}
+              <a
+                href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(
+                  "Requesting 15-Min Workshop / AI Training Consultation"
+                )}&body=${encodeURIComponent(
+                  "Hi Aaqib,\n\nI would like to schedule a 15-minute consultation to discuss:\n- Target Date & Topics:\n- Institution / Organization:\n- Expected Cohort Size:\n\nLooking forward to speaking."
+                )}`}
+                className="flex items-center justify-between p-3.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-700 dark:text-indigo-400 hover:bg-indigo-500/15 transition-all group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-indigo-500/20 text-indigo-600 dark:text-indigo-300">
+                    <Calendar className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold">Book a 15-Min Discovery Call</div>
+                    <div className="text-[10px] text-slate-500 dark:text-zinc-400">Direct consultation for institutions &amp; enterprise teams</div>
+                  </div>
+                </div>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform shrink-0" />
+              </a>
+
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-zinc-950/60 border border-slate-200 dark:border-zinc-800 text-xs text-slate-500 dark:text-zinc-400 flex items-center gap-2">
                 <Clock className="w-4 h-4 text-slate-400 flex-shrink-0" />
                 <span>Typical response time is within 24 hours.</span>
@@ -239,6 +262,34 @@ export function ContactSection() {
                     placeholder="name@organization.com"
                     className="w-full px-3.5 py-2.5 rounded-lg bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-white text-xs sm:text-sm focus:outline-none focus:ring-1 focus:ring-slate-400 transition-all placeholder:text-slate-400"
                   />
+                </div>
+              </div>
+
+              {/* Quick Topic Presets */}
+              <div>
+                <label className="block text-xs font-mono font-medium text-slate-700 dark:text-zinc-300 mb-1.5">
+                  Inquiry Focus Presets
+                </label>
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {[
+                    "Training / Workshop Inquiry",
+                    "Corporate AI Bootcamp",
+                    "XAI Research Collaboration",
+                    "AI Architecture Consulting",
+                  ].map((preset) => (
+                    <button
+                      key={preset}
+                      type="button"
+                      onClick={() => setFormData({ ...formData, subject: preset })}
+                      className={`text-[11px] font-mono px-2.5 py-1 rounded-lg border transition-all ${
+                        formData.subject === preset
+                          ? "bg-slate-900 text-white dark:bg-zinc-100 dark:text-zinc-950 border-slate-900 dark:border-white shadow-xs"
+                          : "bg-slate-50 dark:bg-zinc-950 border-slate-200 dark:border-zinc-800 text-slate-600 dark:text-zinc-400 hover:border-slate-300 dark:hover:border-zinc-700"
+                      }`}
+                    >
+                      {preset}
+                    </button>
+                  ))}
                 </div>
               </div>
 
