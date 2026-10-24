@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "AIwithMir",
   author: "Aaqib Rashid Mir",
-  title: "Aaqib Rashid Mir | AIwithMir — Data Science & AI Trainer, AI Researcher, AI Engineer",
-  headline: "Data Science & AI Trainer | AI Researcher | AI Engineer",
+  title: "Aaqib Rashid Mir | AIwithMir — Data Science & AI Trainer, GenAI Engineer, XAI Researcher, Healthcare Analyst",
+  headline: "Data Science & AI Trainer | GenAI Engineer | XAI Researcher | Healthcare Analyst",
   tagline: "Learn. Build. Automate.",
   subheadline:
     "Empowering developers, students, and enterprises with practical Artificial Intelligence, Large Language Models, Agentic AI, and Machine Learning engineering.",

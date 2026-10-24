@@ -36,7 +36,7 @@ export function Hero() {
             {/* Status Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/80 backdrop-blur-md text-zinc-300 text-xs font-mono">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Assistant Professor &bull; AI Trainer &bull; Researcher</span>
+              <span>Data Science &amp; AI Trainer &bull; GenAI Engineer &bull; XAI Researcher &bull; Healthcare Analyst</span>
             </div>
 
             {/* Name & Main Display Title */}

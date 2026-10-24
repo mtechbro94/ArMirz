@@ -48,7 +48,7 @@ export default function ResumePage() {
               Aaqib Rashid Mir
             </h1>
             <div className="text-lg font-semibold text-cyan-600 dark:text-cyan-400 mt-1">
-              Assistant Professor | Data Science &amp; AI Trainer | AI Researcher
+              Data Science &amp; AI Trainer | GenAI Engineer | XAI Researcher | Healthcare Analyst
             </div>
 
             <div className="mt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-600 dark:text-slate-400">
