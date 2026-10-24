@@ -1,6 +1,5 @@
-import { MetadataRoute } from "next";
-import { siteConfig } from "@/data/site";
-import { articlesData } from "@/data/articles";
+import type { MetadataRoute } from "next";
+import { siteConfig } from "../data/site.ts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [

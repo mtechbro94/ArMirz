@@ -9,76 +9,69 @@ import {
   Github,
   Linkedin,
   Mail,
-  Award,
-  GraduationCap,
-  Sparkles,
   Terminal,
-  MapPin,
-  CheckCircle2,
+  Sparkles,
 } from "lucide-react";
 import { siteConfig } from "@/data/site";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-28 pb-16 overflow-hidden">
-      {/* Background Subtle Depth - Clean & Non-Distracting */}
-      <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-sky-500/[0.04] dark:bg-sky-500/[0.03] rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-amber-500/[0.03] rounded-full blur-3xl" />
-        
-        {/* Subtle engineering grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_35%,#000_70%,transparent_100%)]" />
+    <section className="relative min-h-[92vh] flex items-center pt-28 pb-20 overflow-hidden bg-[#090a0f] text-zinc-100">
+      {/* Cinematic Ambient Background Lighting */}
+      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
+        {/* Soft radial warm glow behind portrait */}
+        <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-amber-500/[0.04] rounded-full blur-[120px]" />
+        {/* Subtle indigo depth glow */}
+        <div className="absolute top-1/4 left-1/3 w-[600px] h-[400px] bg-indigo-500/[0.03] rounded-full blur-[140px]" />
+        {/* Architectural subtle grid lines */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,#000_60%,transparent_100%)]" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column: Authentic Senior Engineer Narrative */}
+          {/* Left Column: Editorial Headline & Actions */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-6 text-left">
             
             {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/5 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 text-xs font-mono">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Available for Workshops, Advisory &amp; AI Engineering</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-zinc-800 bg-zinc-900/80 backdrop-blur-md text-zinc-300 text-xs font-mono">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span>Assistant Professor &bull; AI Trainer &bull; Researcher</span>
             </div>
 
-            {/* Name & Headline */}
-            <div className="space-y-2">
-              <p className="text-xs font-mono uppercase tracking-widest text-slate-500 dark:text-zinc-400">
-                Personal Portfolio &bull; Aaqib Rashid Mir
-              </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-slate-900 dark:text-zinc-50 leading-[1.08]">
+            {/* Name & Main Display Title */}
+            <div className="space-y-3">
+              <span className="text-xs font-mono uppercase tracking-[0.25em] text-zinc-400 block">
+                Portfolio &amp; Engineering Lab
+              </span>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-[-0.035em] text-white leading-[1.02]">
                 Aaqib Rashid Mir
               </h1>
-              <p className="text-lg sm:text-xl font-medium text-slate-700 dark:text-zinc-300">
-                Data Science &amp; AI Trainer &bull; AI Researcher &bull; AI Engineer
+              <p className="text-xl sm:text-2xl font-display font-medium text-zinc-300 leading-snug">
+                Designing Explainable AI Systems. <br className="hidden sm:inline" />
+                Training the Next Generation of AI Engineers.
               </p>
             </div>
 
-            {/* Editorial Quote */}
-            <p className="text-lg font-serif italic text-slate-800 dark:text-zinc-200 border-l-2 border-amber-500/60 pl-3.5 py-0.5">
-              &ldquo;{siteConfig.heroQuote}&rdquo;
-            </p>
-
-            {/* Concise Bio */}
-            <p className="text-sm sm:text-base text-slate-600 dark:text-zinc-400 max-w-xl leading-relaxed">
+            {/* Editorial Narrative */}
+            <p className="text-sm sm:text-base text-zinc-400 max-w-xl leading-relaxed">
               Former Assistant Professor in AI &amp; Data Science at Guru Nanak Institutions, founder of{" "}
-              <strong className="text-slate-900 dark:text-zinc-200 font-semibold">The Coding Science</strong>, and published researcher in Explainable AI (XAI) and Multimodal Clinical Decision Support. Over 3 years delivering hands-on engineering education to 500+ engineers.
+              <strong className="text-white font-medium">The Coding Science</strong>, and author of peer-reviewed research in multimodal clinical decision support. Over 3 years bridging first-principles theory with production AI engineering.
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3.5 pt-2 w-full sm:w-auto">
               <Link
                 href="#projects"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 dark:bg-zinc-100 dark:text-zinc-950 dark:hover:bg-white shadow-sm hover:scale-[1.01] active:scale-[0.99] transition-all"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-zinc-950 bg-white hover:bg-zinc-200 shadow-md hover:scale-[1.01] active:scale-[0.99] transition-all"
               >
-                <span>View Projects &amp; Code</span>
+                <span>Explore Code &amp; Systems</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
 
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-slate-800 dark:text-zinc-200 border border-slate-300 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900/40 hover:bg-slate-100 dark:hover:bg-zinc-800/80 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-zinc-200 border border-zinc-800 bg-zinc-900/60 hover:bg-zinc-800/80 hover:text-white transition-all"
               >
                 <span>Get in Touch</span>
               </Link>
@@ -86,21 +79,21 @@ export function Hero() {
               <Link
                 href="/docs/Aaqib_Rashid_Mir_CV.pdf"
                 target="_blank"
-                className="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl text-sm font-medium text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-zinc-200 transition-colors"
+                className="inline-flex items-center justify-center gap-1.5 px-4 py-3.5 rounded-xl text-sm font-medium text-zinc-400 hover:text-white transition-colors"
               >
                 <Download className="w-4 h-4" />
                 <span>Resume (PDF)</span>
               </Link>
             </div>
 
-            {/* Verified Profiles */}
-            <div className="flex items-center gap-3 pt-3 border-t border-slate-200 dark:border-zinc-800/80 w-full text-xs font-mono text-slate-500 dark:text-zinc-400">
-              <span className="uppercase tracking-wider">Profiles:</span>
+            {/* Verified Links Strip */}
+            <div className="flex items-center gap-3 pt-4 border-t border-zinc-800/80 w-full text-xs font-mono text-zinc-400">
+              <span className="uppercase tracking-wider text-zinc-400">Verified:</span>
               <a
                 href={siteConfig.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors flex items-center gap-1"
+                className="hover:text-sky-400 transition-colors flex items-center gap-1"
               >
                 <Linkedin className="w-3.5 h-3.5" />
                 <span>LinkedIn</span>
@@ -110,7 +103,7 @@ export function Hero() {
                 href={siteConfig.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-slate-900 dark:hover:text-zinc-100 transition-colors flex items-center gap-1"
+                className="hover:text-white transition-colors flex items-center gap-1"
               >
                 <Github className="w-3.5 h-3.5" />
                 <span>GitHub</span>
@@ -120,7 +113,7 @@ export function Hero() {
                 href={siteConfig.socials.colab}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-amber-500 transition-colors flex items-center gap-1"
+                className="hover:text-amber-400 transition-colors flex items-center gap-1"
               >
                 <Terminal className="w-3.5 h-3.5" />
                 <span>Colab</span>
@@ -129,48 +122,44 @@ export function Hero() {
 
           </div>
 
-          {/* Right Column: Authentic Workspace Photograph (No Cheap AI Overlays) */}
+          {/* Right Column: Seamlessly Blended Workspace Portrait */}
           <div className="lg:col-span-5 flex justify-center items-center">
-            <div className="w-full max-w-[390px] group">
+            <div className="relative w-full max-w-[420px] group">
               
-              {/* Studio Frame Card */}
-              <div className="relative rounded-2xl overflow-hidden bg-slate-100 dark:bg-zinc-900 border border-slate-300 dark:border-zinc-800 shadow-2xl shadow-black/20 dark:shadow-black/60 transition-transform duration-500 group-hover:scale-[1.01]">
-                
-                {/* Photo Header Bar (Clean Studio Accent) */}
-                <div className="px-4 py-2.5 bg-slate-200/70 dark:bg-zinc-950/70 border-b border-slate-300 dark:border-zinc-800/80 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-zinc-700" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-zinc-700" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-400 dark:bg-zinc-700" />
-                  </div>
-                  <span className="text-[11px] font-mono text-slate-500 dark:text-zinc-400">
-                    aaqib-workspace.jpg
-                  </span>
-                </div>
+              {/* Soft Ambient Halo behind the portrait */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-amber-500/10 via-indigo-500/5 to-transparent rounded-3xl blur-2xl opacity-70 group-hover:opacity-100 transition-opacity" />
 
-                {/* Real Photo Image */}
-                <div className="relative aspect-[551/790] w-full bg-slate-950 overflow-hidden">
+              {/* Seamless Blended Image Container */}
+              <div className="relative rounded-3xl overflow-hidden bg-[#090a0f] border border-zinc-800/80 shadow-2xl shadow-black/80">
+                
+                {/* Photo with blurred bokeh background smoothly melted into hero bg */}
+                <div className="relative aspect-[551/790] w-full overflow-hidden bg-[#090a0f]">
                   <Image
                     src="/images/aaqib-profile.jpg"
-                    alt="Aaqib Rashid Mir at his workspace in The Coding Science studio"
+                    alt="Aaqib Rashid Mir at his desk in The Coding Science studio"
                     fill
                     priority
-                    sizes="(max-width: 768px) 100vw, 390px"
-                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, 420px"
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
                   />
+                  {/* Additional soft gradient mask at bottom to ensure zero visible seams */}
+                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#090a0f] via-[#090a0f]/60 to-transparent pointer-events-none" />
                 </div>
 
-                {/* Photo Caption Bar */}
-                <div className="p-3.5 bg-white dark:bg-zinc-950 border-t border-slate-200 dark:border-zinc-800/80 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-2 h-2 rounded-full bg-emerald-500" />
-                    <span className="text-xs font-mono font-medium text-slate-800 dark:text-zinc-200">
-                      The Coding Science Studio
-                    </span>
+                {/* Editorial Floating Info Overlay */}
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-zinc-950/80 backdrop-blur-xl border border-zinc-800/80 shadow-xl flex items-center justify-between">
+                  <div>
+                    <div className="text-xs font-semibold text-white tracking-tight">
+                      Aaqib Rashid Mir
+                    </div>
+                    <div className="text-[11px] text-zinc-400 font-mono">
+                      Founder, The Coding Science &bull; AI Trainer
+                    </div>
                   </div>
-                  <span className="text-[11px] font-mono text-slate-500 dark:text-zinc-400">
-                    Hyderabad / J&amp;K
-                  </span>
+                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-mono">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>Active Lab</span>
+                  </div>
                 </div>
 
               </div>
@@ -180,18 +169,18 @@ export function Hero() {
 
         </div>
 
-        {/* Minimalist Credibility Stats Bar */}
-        <div className="mt-16 pt-8 border-t border-slate-200 dark:border-zinc-800/80">
+        {/* Minimalist Metrics Strip */}
+        <div className="mt-16 pt-8 border-t border-zinc-800/80">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {siteConfig.stats.map((stat) => (
               <div
                 key={stat.label}
-                className="p-4 rounded-xl bg-slate-50/80 dark:bg-zinc-900/30 border border-slate-200/80 dark:border-zinc-800/60"
+                className="p-4 rounded-xl bg-zinc-900/30 border border-zinc-800/60"
               >
-                <div className="text-2xl font-display font-extrabold text-slate-900 dark:text-zinc-100">
+                <div className="text-2xl font-display font-extrabold text-white">
                   {stat.value}
                 </div>
-                <div className="text-xs text-slate-500 dark:text-zinc-400 mt-1 leading-snug">
+                <div className="text-xs text-zinc-400 mt-1 leading-snug">
                   {stat.label}
                 </div>
               </div>

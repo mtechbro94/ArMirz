@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node --experimental-strip-types --test tests/data.test.ts tests/assets.test.ts tests/routes.test.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
