@@ -1,0 +1,43 @@
+export const siteConfig = {
+  name: "AIwithMir",
+  author: "Aaqib Rashid Mir",
+  title: "Aaqib Rashid Mir | AIwithMir — Data Science & AI Trainer, AI Researcher, AI Engineer",
+  headline: "Data Science & AI Trainer | AI Researcher | AI Engineer",
+  tagline: "Learn. Build. Automate.",
+  subheadline:
+    "Empowering developers, students, and enterprises with practical Artificial Intelligence, Large Language Models, Agentic AI, and Machine Learning engineering.",
+  heroQuote: "Turning Complex AI Concepts into Real-World Skills.",
+  heroDescription:
+    "I teach, build, and explore Data Science, Machine Learning, Generative AI, and modern software technologies through production-grade projects and career-focused technical education.",
+  location: "Kupwara, Jammu & Kashmir / Hyderabad, India",
+  email: "mtechbro94@gmail.com",
+  phone: "+91 7006196821",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://aiwithmir.vercel.app",
+  socials: {
+    github: "https://github.com/mtechbro94",
+    linkedin: "https://www.linkedin.com/in/aaqib-rashid-mir/",
+    email: "mailto:mtechbro94@gmail.com",
+    colab: "https://colab.research.google.com/github/mtechbro94",
+    organization: "The Coding Science — School of Technology & AI Innovations",
+  },
+  stats: [
+    { label: "Years of Academic & Lab Teaching", value: "3+" },
+    { label: "Engineers & Students Trained", value: "500+" },
+    { label: "Hands-on Technical Workshops", value: "15+" },
+    { label: "Capstone Projects Mentored", value: "100+" },
+    { label: "Peer-Reviewed Research Papers", value: "2+" },
+    { label: "Cloud & AI Industry Certifications", value: "4" },
+  ],
+  navLinks: [
+    { name: "About", href: "/#about" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Teaching & Workshops", href: "/#teaching" },
+    { name: "Courses", href: "/#courses" },
+    { name: "Research", href: "/#research" },
+    { name: "Certifications", href: "/#certifications" },
+    { name: "Articles", href: "/#articles" },
+    { name: "Resume", href: "/resume" },
+    { name: "Contact", href: "/#contact" },
+  ],
+};
