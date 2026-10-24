@@ -41,8 +41,8 @@ export function Hero() {
 
             {/* Name & Main Display Title */}
             <div className="space-y-3">
-              <span className="text-xs font-mono uppercase tracking-[0.25em] text-zinc-400 block">
-                Portfolio &amp; Engineering Lab
+              <span className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400 block">
+                THE CODING SCIENCE — SCHOOL OF TECHNOLOGY &amp; AI INNOVATIONS
               </span>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-[-0.035em] text-white leading-[1.02]">
                 Aaqib Rashid Mir
@@ -55,8 +55,7 @@ export function Hero() {
 
             {/* Editorial Narrative */}
             <p className="text-sm sm:text-base text-zinc-400 max-w-xl leading-relaxed">
-              Former Assistant Professor in AI &amp; Data Science at Guru Nanak Institutions, founder of{" "}
-              <strong className="text-white font-medium">The Coding Science</strong>, and author of peer-reviewed research in multimodal clinical decision support. Over 3 years bridging first-principles theory with production AI engineering.
+              Founder of <strong className="text-white font-medium">The Coding Science</strong> and Technical Trainer in AI, ML &amp; Data Science. Active researcher in Explainable AI (XAI) and multimodal healthcare analytics, with 3+ years delivering production-oriented training across Python, Analytics, Data Science, AI, and DevOps.
             </p>
 
             {/* Action Buttons */}
