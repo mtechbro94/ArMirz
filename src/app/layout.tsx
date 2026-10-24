@@ -157,7 +157,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} font-sans antialiased bg-slate-50 dark:bg-[#040711] text-slate-900 dark:text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500/30 selection:text-cyan-200`}
+        className={`${inter.variable} ${outfit.variable} ${jetbrainsMono.variable} font-sans antialiased bg-white dark:bg-[#090a0f] text-slate-900 dark:text-zinc-100 min-h-screen flex flex-col selection:bg-zinc-800 selection:text-white`}
       >
         <ThemeProvider>
           <Navbar />

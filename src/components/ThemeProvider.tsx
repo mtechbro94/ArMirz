@@ -40,7 +40,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>
-      {mounted ? children : <div className="dark bg-[#040711] text-slate-100 min-h-screen">{children}</div>}
+      {mounted ? children : <div className="dark bg-[#090a0f] text-zinc-100 min-h-screen">{children}</div>}
     </ThemeContext.Provider>
   );
 }

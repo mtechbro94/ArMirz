@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function ResumePage() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#070c1b] text-slate-900 dark:text-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white dark:bg-[#090a0f] text-slate-900 dark:text-zinc-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         
         {/* Navigation & Action Bar (Hidden in Print) */}
