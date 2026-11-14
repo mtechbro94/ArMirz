@@ -85,4 +85,24 @@ export const publicationsData: Publication[] = [
       { label: "GitHub Codebase", url: "https://github.com/mtechbro94/Multimodal-Explainable-AI-for-Clinical-Decision-Support" },
     ],
   },
+  {
+    title: "Stress-Testing Longitudinal Synthetic EHR and ICU Waveform Generation: A Unified Privacy, Utility, and Fairness Benchmark",
+    authors: "Mir, A. R.",
+    journal: "Open Science & Clinical AI Benchmark Initiative",
+    year: 2026,
+    type: "Preprint / In Submission",
+    status: "Under Review",
+    abstract:
+      "Establishes a principled empirical benchmark suite to stress-test synthetic longitudinal Electronic Health Records (EHR) and ICU waveforms along three critical clinical axes: privacy (shadow-model membership inference and attribute inference attacks), utility (Train-on-Synthetic-Test-on-Real and Train-on-Real-Test-on-Synthetic pipelines), and algorithmic fairness (demographic subgroup disparities) across MIMIC-IV cohorts.",
+    tags: ["Synthetic EHR", "MIMIC-IV", "Membership Inference", "Differential Privacy", "Healthcare Fairness", "Waveforms"],
+    bibtex: `@article{mir2026syntheticehr,
+  title={Stress-Testing Longitudinal Synthetic EHR and ICU Waveform Generation: A Unified Privacy, Utility, and Fairness Benchmark},
+  author={Mir, Aaqib Rashid},
+  journal={Open Science & Clinical AI Benchmark Initiative},
+  year={2026}
+}`,
+    links: [
+      { label: "GitHub Benchmark Suite", url: "https://github.com/mtechbro94/synthetic-ehr-benchmark" },
+    ],
+  },
 ];

@@ -17,7 +17,7 @@ export function ProjectsSection() {
   const [selectedFilter, setSelectedFilter] = useState<string>("All");
   const [activeModalProject, setActiveModalProject] = useState<Project | null>(null);
 
-  const categories = ["All", "Computer Vision & XAI", "AI Agents", "GenAI & LLMs", "Automation"];
+  const categories = ["All", "Data Science & ML", "Computer Vision & XAI", "AI Agents", "GenAI & LLMs", "Automation"];
 
   const filteredProjects =
     selectedFilter === "All"

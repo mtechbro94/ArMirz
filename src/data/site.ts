@@ -25,7 +25,7 @@ export const siteConfig = {
     { label: "Engineers & Students Trained", value: "500+" },
     { label: "Hands-on Technical Workshops", value: "15+" },
     { label: "Capstone Projects Mentored", value: "100+" },
-    { label: "Peer-Reviewed Research Papers", value: "2+" },
+    { label: "Peer-Reviewed & Research Works", value: "3+" },
     { label: "Cloud & AI Industry Certifications", value: "4" },
   ],
   navLinks: [

@@ -19,6 +19,30 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
+    id: "synthetic-ehr-benchmark",
+    title: "Synthetic EHR Benchmark: Privacy, Utility & Fairness Stress Testing",
+    tagline: "Stress-Testing Longitudinal Synthetic EHR & ICU Waveforms on MIMIC-IV",
+    category: "Data Science & ML",
+    summary:
+      "A principled empirical benchmarking framework for stress-testing synthetic longitudinal Electronic Health Records (EHR) and ICU waveform generators along three critical clinical axes: privacy risk, utility retention, and subgroup fairness.",
+    problemStatement:
+      "Generative models in healthcare (GANs, diffusion models, longitudinal transformers) often assert privacy and high data fidelity without standardized, adversarial stress testing across membership leakage, attribute disclosure, longitudinal temporal fidelity, and demographic subgroup parity.",
+    solution:
+      "Engineered an end-to-end Python benchmarking suite featuring shadow-model membership inference and attribute inference attacks, Train-on-Synthetic-Test-on-Real (TSTR) and Train-on-Real-Test-on-Synthetic (TRTS) clinical utility pipelines, temporal realism probes (autocorrelation, transition drift, trend fidelity), and demographic subgroup parity gap analysis evaluated against MIMIC-IV clinical cohorts.",
+    techStack: ["Python 3.10+", "MIMIC-IV", "scikit-learn", "PyTorch", "NumPy", "Pandas", "GitHub Actions CI"],
+    features: [
+      "Multi-vector privacy attack suite: shadow-model membership inference AUROC and k-NN/decision tree attribute inference accuracy",
+      "Clinical utility evaluation pipeline: TSTR / TRTS benchmarking across multiple downstream diagnostic classifiers",
+      "Temporal realism probes quantifying transition matrix drift, autocorrelation decay, and longitudinal trend fidelity",
+      "Demographic subgroup fairness stress testing measuring disparate utility and privacy leakage across sensitive patient cohorts",
+      "Standardized MIMIC-IV cohort ingestion, modular evaluation reporting, and automated CI smoke test pipeline",
+    ],
+    datasetOrScope: "MIMIC-IV longitudinal clinical cohort & ICU physiological waveforms",
+    githubUrl: "https://github.com/mtechbro94/synthetic-ehr-benchmark",
+    featured: true,
+    status: "Completed",
+  },
+  {
     id: "xm-cbm-clinical-decision-support",
     title: "Faithful by Design: Cross-Modal Concept Bottleneck Framework (XM-CBM)",
     tagline: "Trustworthy Multimodal Clinical Decision Support with Real-Time Human-in-the-Loop Interventions",
