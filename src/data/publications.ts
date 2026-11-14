@@ -102,6 +102,7 @@ export const publicationsData: Publication[] = [
   year={2026}
 }`,
     links: [
+      { label: "1-Click Google Colab Pipeline", url: "https://colab.research.google.com/github/mtechbro94/synthetic-ehr-benchmark/blob/main/notebooks/Synthetic_EHR_Benchmark_Walkthrough.ipynb" },
       { label: "GitHub Benchmark Suite", url: "https://github.com/mtechbro94/synthetic-ehr-benchmark" },
     ],
   },

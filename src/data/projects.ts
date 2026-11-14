@@ -39,6 +39,7 @@ export const projectsData: Project[] = [
     ],
     datasetOrScope: "MIMIC-IV longitudinal clinical cohort & ICU physiological waveforms",
     githubUrl: "https://github.com/mtechbro94/synthetic-ehr-benchmark",
+    colabUrl: "https://colab.research.google.com/github/mtechbro94/synthetic-ehr-benchmark/blob/main/notebooks/Synthetic_EHR_Benchmark_Walkthrough.ipynb",
     featured: true,
     status: "Completed",
   },
